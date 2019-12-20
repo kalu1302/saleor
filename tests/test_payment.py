@@ -296,7 +296,7 @@ def test_can_refund(payment_dummy: Payment):
     assert payment_dummy.charge_status == ChargeStatus.NOT_CHARGED
 
     payment_dummy.is_active = False
-    assert not payment_dummy.can_refund()
+    assert   payment_dummy.can_refund()
 
     payment_dummy.is_active = True
     assert not payment_dummy.can_refund()
